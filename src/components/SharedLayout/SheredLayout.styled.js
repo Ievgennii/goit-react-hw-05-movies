@@ -18,6 +18,10 @@ export const Header = styled.header`
 `;
 
 export const Link = styled(NavLink)`
+display: flex;
+  align-items: center;
+  gap: 5px;
+  
   padding: 8px 16px;
   border-radius: 4px;
   text-decoration: none;
