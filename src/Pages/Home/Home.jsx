@@ -14,6 +14,7 @@ const Home = () => {
     getTrending().then(data => {
       setTrendMovies(data.results);
       setIsLoading(false);
+      // console.log(trendMovies)
     });
   }, []);
 
@@ -24,6 +25,17 @@ const Home = () => {
         {trendMovies.map(movie => (
           <li key={movie.id}>
             <MovieLink to={`/movies/${movie.id}`} state={{ from: location }}>
+            <img
+          src={
+            movie.poster_path
+              ? `https://image.tmdb.org/t/p/w300${movie.poster_path}`
+              : `http://www.suryalaya.org/images/no_image.jpg`
+          }
+          width={320}
+          height={380}
+          loading="lazy"
+          alt="poster"
+        />
               {movie.original_title || movie.name}
             </MovieLink>
           </li>
