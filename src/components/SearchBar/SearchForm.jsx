@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { Form } from '../Styles/Element.styled';
 
 const SearchForm = ({ onSubmit, children }) => (
@@ -7,6 +7,6 @@ const SearchForm = ({ onSubmit, children }) => (
 
 export default SearchForm;
 
-SearchForm.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
-};
+// SearchForm.propTypes = {
+//   onSubmit: PropTypes.func.isRequired,
+// };
