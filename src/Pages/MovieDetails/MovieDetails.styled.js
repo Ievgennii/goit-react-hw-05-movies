@@ -26,7 +26,8 @@ export const Button = styled.button`
   margin-bottom: 10px;
   font-weight: 500;
   &:hover {
-    background-color: #63c5da;
+    background-color: blue;
+    color: white;
   }
 `;
 
@@ -35,6 +36,10 @@ export const LinkBack = styled(Link)`
   font-size: 14px;
   align-items: center;
   column-gap: 10px;
+  &:hover {
+    
+    color: white;
+  }
 `;
 export const InfoBox = styled.div`
   padding: 20px;
