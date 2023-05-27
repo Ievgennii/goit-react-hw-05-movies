@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 
 export const Title = styled.h2`
   margin: 0;
@@ -20,12 +21,17 @@ export const GenresList = styled.ul`
 `;
 export const Button = styled.button`
   margin-top: 16px;
+  margin-right: 10px;
   padding: 8px 16px;
   border-radius: 4px;
   border: none;
   margin-bottom: 10px;
   font-weight: 500;
   &:hover {
+    background-color: blue;
+    color: white;
+  }
+  &.active {
     background-color: blue;
     color: white;
   }
@@ -44,4 +50,34 @@ export const LinkBack = styled(Link)`
 export const InfoBox = styled.div`
   padding: 20px;
   border-bottom: solid 1px grey;
+`;
+
+export const LinkReview = styled(Link)`
+display: flex;
+font-size: 14px;
+align-items: center;
+column-gap: 10px;
+&:hover {
+  
+  color: white;
+}
+
+  &.active {
+    ccolor: white;
+  }
+`;
+
+export const LinkCast = styled(Link)`
+display: flex;
+font-size: 14px;
+align-items: center;
+column-gap: 10px;
+&:hover {
+  
+  color: white;
+}
+
+  &.active {
+    ccolor: white;
+  }
 `;

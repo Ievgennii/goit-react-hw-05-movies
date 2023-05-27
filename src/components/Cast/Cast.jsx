@@ -13,39 +13,24 @@ const Cast = () => {
     <CastList>
       {castList.length > 0
         ? castList.map(({ id, name, profile_path, character }) => (
-          <CastItem key={id}>
-                <CastImg
-                  src={
-                    profile_path
-                      ? 'https://image.tmdb.org/t/p/w500' + profile_path
-                      : 'https://static.vecteezy.com/system/resources/previews/005/337/799/original/icon-image-not-found-free-vector.jpg'
-                  }
-                  alt={name}
-                />
-                <CastDescr>
-                  <p>
-                    <b>Actor:</b> {name}
-                  </p>
-                  <p>
-                    <b>Character:</b> {character}
-                  </p>
-                </CastDescr>
-              </CastItem>
-            // <CastItem key={id}>
-            //   <img
-            //     src={
-            //       profile_path
-            //         ? `https://image.tmdb.org/t/p/w200${profile_path}`
-            //         : `http://www.suryalaya.org/images/no_image.jpg`
-            //     }
-            //     alt="actor"
-            //     loading="lazy"
-            //     width={120}
-            //     height={180}
-            //   />
-            //   <Name>{name}</Name>
-            //   <Character> Character: {character}</Character>
-            // </CastItem>
+            <CastItem key={id}>
+              <CastImg
+                src={
+                  profile_path
+                    ? 'https://image.tmdb.org/t/p/w500' + profile_path
+                    : 'https://static.vecteezy.com/system/resources/previews/005/337/799/original/icon-image-not-found-free-vector.jpg'
+                }
+                alt={name}
+              />
+              <CastDescr>
+                <p>
+                  <b>Actor:</b> {name}
+                </p>
+                <p>
+                  <b>Character:</b> {character}
+                </p>
+              </CastDescr>
+            </CastItem>
           ))
         : "Sorry, there isn't any info :("}
     </CastList>

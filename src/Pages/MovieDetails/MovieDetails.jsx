@@ -1,4 +1,4 @@
-import { useParams, useLocation, Link, Outlet } from 'react-router-dom';
+import { useParams, useLocation, Outlet } from 'react-router-dom';
 import { getMovieDetails } from '../../Api/apiService';
 import { useState, useEffect } from 'react';
 import {
@@ -9,6 +9,8 @@ import {
   MovieBox,
   MovieInfo,
   Title,
+  LinkReview,
+  LinkCast,
 } from './MovieDetails.styled';
 
 import { HiArrowNarrowLeft } from 'react-icons/hi';
@@ -61,19 +63,16 @@ const MovieDetails = () => {
       </MovieBox>
       <InfoBox>
         <h4>Additional information</h4>
-        <ul>
-          <li>
-            <Link to="cast" state={{ ...location.state }}>
-              Cast
-            </Link>
-          </li>
-          <li>
-            {' '}
-            <Link to="reviews" state={{ ...location.state }}>
-              Reviews
-            </Link>
-          </li>
-        </ul>
+        <Button type="button">
+          <LinkCast state={{ ...location.state }} to="cast">
+            Cast
+          </LinkCast>
+        </Button>
+        <Button type="button">
+          <LinkReview state={{ ...location.state }} to="reviews">
+            Reviews
+          </LinkReview>
+        </Button>
       </InfoBox>
       <Outlet />
     </main>
