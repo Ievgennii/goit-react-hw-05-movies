@@ -2,7 +2,6 @@ import { useParams, useLocation, Outlet } from 'react-router-dom';
 import { getMovieDetails } from '../../Api/apiService';
 import { useState, useEffect } from 'react';
 import {
-  Button,
   GenresList,
   InfoBox,
   LinkBack,
@@ -30,12 +29,11 @@ const MovieDetails = () => {
   const scoreToFixed = score.toFixed(2);
   return (
     <main>
-      <Button type="button">
-        <LinkBack to={location.state?.from ?? '/'}>
-          <HiArrowNarrowLeft size={16} />
-          Go back
-        </LinkBack>
-      </Button>
+      <LinkBack to={location.state?.from ?? '/'}>
+        <HiArrowNarrowLeft size={16} />
+        Go back
+      </LinkBack>
+
       <MovieBox>
         <img
           src={
@@ -63,16 +61,14 @@ const MovieDetails = () => {
       </MovieBox>
       <InfoBox>
         <h4>Additional information</h4>
-        <Button type="button">
-          <LinkCast state={{ ...location.state }} to="cast">
-            Cast
-          </LinkCast>
-        </Button>
-        <Button type="button">
-          <LinkReview state={{ ...location.state }} to="reviews">
-            Reviews
-          </LinkReview>
-        </Button>
+
+        <LinkCast state={{ ...location.state }} to="cast">
+          Cast
+        </LinkCast>
+
+        <LinkReview state={{ ...location.state }} to="reviews">
+          Reviews
+        </LinkReview>
       </InfoBox>
       <Outlet />
     </main>
