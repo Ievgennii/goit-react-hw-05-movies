@@ -1,4 +1,3 @@
-// import { ColorRing } from 'react-loader-spinner';
 import { MagnifyingGlass } from 'react-loader-spinner';
 
 export const Loader = () => (
